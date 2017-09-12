@@ -1,0 +1,20 @@
+deb http://192.168.42.69:8081/ubuntu xenial-backports main restricted universe multiverse
+deb http://192.168.42.69:8081/ubuntu xenial main restricted
+deb http://192.168.42.69:8081/ubuntu xenial multiverse
+deb http://192.168.42.69:8081/ubuntu xenial universe
+deb http://192.168.42.69:8081/ubuntu xenial-updates main restricted
+deb http://192.168.42.69:8081/ubuntu xenial-updates multiverse
+deb http://192.168.42.69:8081/ubuntu xenial-updates universe
+deb http://192.168.42.69:8082/ubuntu xenial-security main restricted
+deb http://192.168.42.69:8082/ubuntu xenial-security multiverse
+deb http://192.168.42.69:8082/ubuntu xenial-security universe
+deb-src http://192.168.42.69:8081/ubuntu xenial-backports main restricted universe multiverse
+deb-src http://192.168.42.69:8081/ubuntu xenial main restricted
+deb-src http://192.168.42.69:8081/ubuntu xenial multiverse
+deb-src http://192.168.42.69:8081/ubuntu xenial universe
+deb-src http://192.168.42.69:8081/ubuntu xenial-updates main restricted
+deb-src http://192.168.42.69:8081/ubuntu xenial-updates multiverse
+deb-src http://192.168.42.69:8081/ubuntu xenial-updates universe
+deb-src http://192.168.42.69:8082/ubuntu xenial-security main restricted
+deb-src http://192.168.42.69:8082/ubuntu xenial-security multiverse
+deb-src http://192.168.42.69:8082/ubuntu xenial-security universe

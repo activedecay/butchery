@@ -2,7 +2,7 @@
 - name: set up aWorkstation at user-level
   hosts: all
   tasks:
-    - name: sublime text
-      file:
+    - name: sublime text package control thing
+      copy:
         src: '/vagrant/Package Control.sublime-package'
         dest: '~/.config/sublime-text-3/Installed Packages/'

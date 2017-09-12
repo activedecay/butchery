@@ -16,15 +16,17 @@
         filename: 'sublime-dev'
         repo: deb https://download.sublimetext.com/ apt/dev/
 
+    - name: copy sources.list file to apt
+      copy:
+        src: /vagrant/sources.list
+        dest: /etc/apt
     - name: upgrade all the things
       apt:
         update_cache: yes
         upgrade: dist
-
     - name: install all the things
       apt:
-        # todo: huh? linux-aws
-        name: sublime-text,virtualbox,vagrant,ansible,curl,git,zsh,openvpn,python-pip,tmuxinator,awscli
+        name: sublime-text,virtualbox,vagrant,curl,git,zsh,openvpn,python-pip,tmuxinator,awscli,gnupg-agent
         state: present
 
     - name: install boto boto3 + botocore
