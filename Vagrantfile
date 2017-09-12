@@ -3,13 +3,8 @@
 
 # noinspection RubyResolve
 Vagrant.configure('2') do |config|
-  # config.vm.box = 'box-cutter/ubuntu1604-desktop' # garbage completely? can't even open a terminal on the desktop
-  # config.vm.box = 'bstoots/xubuntu-16.04-desktop-amd64'
-  config.vm.box = 'pantsco/crucify'
-  config.vm.box_url = '../boxcutter-ubu/box/virtualbox/ubuntu1604-desktop-2017.0.0.box'
+  config.vm.box = 'boxcutter/ubuntu1604-desktop'
   config.vm.hostname = 'butchery'
-  # config.vm.network 'private_network', ip: '192.168.42.2' # this works, but doesn't allow WAN access
-  # config.vm.network 'public_network'
   config.vm.provider 'virtualbox' do |v|
     v.memory = '4096'
     v.cpus = '6'
