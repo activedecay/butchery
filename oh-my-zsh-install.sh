@@ -87,13 +87,13 @@ main() {
 
   ################################################################
   # remove them plugins
-  grep -v '^plugins=' .zshrc-omztemp > ~/.zshrc-pantsco-temp
+  grep -v '^plugins=' ~/.zshrc-omztemp > ~/.zshrc-pantsco-temp
   # add our plugs
   echo 'plugins=(git aws git-flow history github jira tmux tmuxinator)' >> ~/.zshrc-pantsco-temp
   ################################################################
 
   mv -f ~/.zshrc-pantsco-temp ~/.zshrc
-  rm -f .zshrc-omztemp
+  rm -f ~/.zshrc-omztemp
 
   # If this user's login shell is not already "zsh", attempt to switch.
   TEST_CURRENT_SHELL=$(expr "$SHELL" : '.*/\(.*\)')
