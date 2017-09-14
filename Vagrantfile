@@ -15,7 +15,6 @@ Vagrant.configure('2') do |config|
     config.vm.box_version = '20170420.01'
     v.memory = '4096'
     v.cpus = '6'
-    v.gui = true
   end
 
   # provision using root
