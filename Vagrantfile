@@ -2,9 +2,14 @@
 # vi: set ft=ruby :
 
 install_libvirt_required = <<-SHELL
+  # required to mount /vagrant so ansible_local provisioning can read playbook*.yml
   apt install 9mount
+
+  # required for some odd reason, probably box specific.
+  apt install apt-transport-https
 SHELL
 
+# TODO
 # The automatic rename function is turned on. Add the following to your .tmux.conf
 # file (and/or run from the command line to have it take effect immediately):
 # set-window-option -g automatic-rename off
