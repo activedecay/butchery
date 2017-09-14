@@ -4,6 +4,7 @@
 # https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh
 
 main() {
+  user=$1
   # Use colors, but only if connected to a terminal, and that terminal
   # supports them.
   if which tput >/dev/null 2>&1; then
@@ -100,7 +101,7 @@ main() {
     # If this platform provides a "chsh" command (not Cygwin), do it, man!
     if hash chsh >/dev/null 2>&1; then
       printf "${BLUE}Time to change your default shell to zsh!${NORMAL}\n"
-      echo vagrant | chsh -s $(grep /zsh$ /etc/shells | tail -1) # oops, not portable; hardcoded ubuntu user.
+      echo ${user} | chsh -s $(grep /zsh$ /etc/shells | tail -1)
     # Else, suggest the user do so manually.
     else
       printf "I can't change your shell automatically because this system does not have chsh.\n"
@@ -131,4 +132,5 @@ main() {
   env zsh
 }
 
-main
+user=$1
+main ${user}

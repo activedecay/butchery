@@ -1,0 +1,5 @@
+---
+- name: copy this repo's sources.list file to apt
+  copy: src=/vagrant/sources.list dest=/etc/apt
+- name: pull in the apt-proxy ip address from apt sources.list
+  apt: update_cache=yes

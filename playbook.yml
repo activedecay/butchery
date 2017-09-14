@@ -2,6 +2,10 @@
 - name: set up aWorkstation as root
   hosts: all
   become: yes
+  # roles:
+  #   - apt-proxy-client
+  # vars_files:
+  #   - vars.yml
   tasks:
     # sublime
     - name: add sublime's key
@@ -17,11 +21,6 @@
         filename: 'sublime-dev'
         repo: deb https://download.sublimetext.com/ apt/dev/
 
-    # apt
-    - name: copy sources.list file to apt
-      copy:
-        src: /vagrant/sources.list
-        dest: /etc/apt
     - name: upgrade all the things
       apt:
         update_cache: yes

@@ -21,9 +21,6 @@ Vagrant.configure('2') do |config|
   end
 
   config.vm.provision :shell, privileged: false,
-                      path: 'oh-my-zsh-install.sh'
-
-  config.vm.provision :shell, privileged: false,
                       inline: <<-SHELL
     # The automatic rename function is turned on. Add the following to your .tmux.conf 
     # file (and/or run from the command line to have it take effect immediately):
