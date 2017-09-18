@@ -1,0 +1,23 @@
+---
+- name: upgrade all the things
+  apt:
+    update_cache: yes
+    upgrade: dist
+
+- name: install all the things
+  apt:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - sublime-text
+    - virtualbox
+    - vagrant
+    - curl
+    - git
+    - zsh
+    - openvpn
+    - python-pip
+    - tmuxinator
+    - awscli
+    - gnupg-agent
+    - network-manager-openvpn

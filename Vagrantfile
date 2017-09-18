@@ -27,13 +27,14 @@ Vagrant.configure('2') do |config|
     v.gui = true
   end
   config.vm.provider :libvirt do |v|
-    config.vm.provision :shell, inline: install_libvirt_required
-    config.vm.synced_folder './', '/vagrant',
-                            type: '9p',
-                            disabled: false,
-                            accessmode: 'squash'
-    config.vm.box = 'peru/ubuntu-desktop-amd64'
-    config.vm.box_version = '20170420.01'
+    # todo the following comments are global, so it doesn't work as intended (provider specific)
+    # config.vm.provision :shell, inline: install_libvirt_required
+    # config.vm.synced_folder './', '/vagrant',
+    #                         type: '9p',
+    #                         disabled: false,
+    #                         accessmode: 'squash'
+    # config.vm.box = 'peru/ubuntu-desktop-amd64'
+    # config.vm.box_version = '20170420.01'
     v.memory = '4096'
     v.cpus = '6'
   end

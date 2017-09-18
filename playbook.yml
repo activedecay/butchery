@@ -5,49 +5,11 @@
   roles:
   #   - apt-proxy-client
      - ypid.wine
-  # vars_files:
-  #   - vars.yml
-  tasks:
-    # sublime
-    - name: add sublime's key
-      apt_key:
-        url: "https://download.sublimetext.com/sublimehq-pub.gpg"
-        state: present
-    - name: add sublime's stable repo
-      apt_repository:
-        filename: 'sublime-stable'
-        repo: deb https://download.sublimetext.com/ apt/stable/
-    - name: add sublime's dev repo
-      apt_repository:
-        filename: 'sublime-dev'
-        repo: deb https://download.sublimetext.com/ apt/dev/
-
-    - name: upgrade all the things
-      apt:
-        update_cache: yes
-        upgrade: dist
-    - name: install all the things
-      apt:
-        name: "{{ item }}"
-        state: present
-      with_items:
-        - sublime-text
-        - virtualbox
-        - vagrant
-        - curl
-        - git
-        - zsh
-        - openvpn
-        - python-pip
-        - tmuxinator
-        - awscli
-        - gnupg-agent
-        - network-manager-openvpn
-
-    # pip
-    - name: install boto boto3 + botocore
-      pip:
-        name: boto,boto3,botocore
+     - sublime-text
+     - workstation-packages
+     - workstation-python
+  vars_files:
+    - vars.yml
 
 #    - name: checkoutrepo
 #    - name: checkout personal Identity Repo
